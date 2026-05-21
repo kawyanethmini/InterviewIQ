@@ -1,0 +1,29 @@
+# User database - contains passwords
+users.json
+
+# Audio files
+*.mp3
+*.wav
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit secrets - contains API keys
+.streamlit/secrets.toml
+
+# Environment files
+.env
+.env.local
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

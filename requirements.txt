@@ -1,0 +1,6 @@
+streamlit
+groq
+SpeechRecognition
+gTTS
+plotly
+pyaudio
