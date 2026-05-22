@@ -57,7 +57,10 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-GROQ_API_KEY = ""   
+try:
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except:
+    GROQ_API_KEY = ""
 client = Groq(api_key=GROQ_API_KEY)
 
 
@@ -1186,7 +1189,7 @@ Answer: {ans}
             model="llama-3.3-70b-versatile", max_tokens=700)
         return r.choices[0].message.content
     except Exception as e:
-        return f"Evaluation failed: {e}"
+        return f"Evaluation failed: {str(e)}"
 
 
 def record_mic(timeout=12) -> str | None:
